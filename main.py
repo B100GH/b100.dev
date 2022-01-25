@@ -1,13 +1,14 @@
 import flask
 from lib import getkey
+from lib import gethome
 
 from flask import Flask
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-    
-    return 
+    home = gethome()
+    return home
 
 @app.route("/gpg")
 def gpg():
